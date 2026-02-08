@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quantfi"
+version = "0.1.0"
+description = "TuShare Pro only A-share daily decision system"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "pandas>=2.0",
+  "numpy>=1.26",
+  "psycopg[binary]>=3.1",
+  "SQLAlchemy>=2.0",
+  "click>=8.1",
+  "tushare>=1.4.13",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+quantfi = "quantfi.scripts.cli:cli"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["quantfi/tests"]
