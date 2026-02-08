@@ -1,7 +1,9 @@
 # quantfi
 
-工程交付流程采用里程碑驱动（M0~M6）+ Conventional Commits + PR DoD 勾选。
+本仓库采用里程碑驱动交付（M0~M6），并落实以下工程治理约束：
 
-- 贡献与分支/标签规范见 `CONTRIBUTING.md`
-- PR 必须按模板提交：`.github/pull_request_template.md`
-- CI 门禁见：`.github/workflows/ci.yml`
+- 分支/里程碑标签/提交规范/降级与日志要求：`CONTRIBUTING.md`
+- PR 统一模板（目标、DoD、证据必填）：`.github/pull_request_template.md`
+- 最低 CI 门禁（ruff + black + pytest）：`.github/workflows/ci.yml`
+
+> 工作方式：一次只做一个里程碑 PR；PR 必须可验收、可解释、可复现。
