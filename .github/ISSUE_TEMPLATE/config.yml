@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📘 Engineering Playbook
+    url: https://github.com/<OWNER>/<REPO>/blob/main/docs/ENGINEERING_PLAYBOOK.md
+    about: 工程规约/门禁/DoD（请先阅读）

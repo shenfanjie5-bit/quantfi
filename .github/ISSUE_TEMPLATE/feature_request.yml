@@ -1,0 +1,66 @@
+name: ✨ Feature Request
+description: 新功能需求（必须有验收标准 DoD）
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请写清楚：属于哪个模块（ingest/features/decision/backtest/report/ops）、
+        是否需要 TuShare 新接口、以及最小 DoD（3条即可）。
+
+  - type: input
+    id: module
+    attributes:
+      label: Module
+      placeholder: "ingest / features / decision / backtest / report / ops"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / Motivation
+      description: 为什么要做？解决什么痛点？
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Solution
+      description: 方案概述（含数据源/接口/降级策略）
+    validations:
+      required: true
+
+  - type: textarea
+    id: tushare_apis
+    attributes:
+      label: TuShare APIs (if any)
+      description: 涉及的 api_name 列表（例如 daily_basic / news / anns_d）
+      placeholder: "daily_basic, news, anns_d"
+    validations:
+      required: false
+
+  - type: textarea
+    id: dod
+    attributes:
+      label: Definition of Done (DoD)
+      description: 3 条可验收标准（必须可测试/可复现）
+      value: |
+        - [ ] ...
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - P0 (blocking MVP)
+        - P1 (next iteration)
+        - P2 (nice to have)
+    validations:
+      required: true

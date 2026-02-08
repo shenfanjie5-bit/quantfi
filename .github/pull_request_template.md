@@ -36,3 +36,17 @@
 ### 运行日志（至少 10 行，包含 run_id）
 ```text
 <贴日志>
+```
+
+### DB 验证（SQL 或截图，至少 1 条）
+```sql
+-- 例如：当天 decision 条数
+SELECT COUNT(*) FROM decision_daily WHERE trade_date='YYYYMMDD';
+```
+
+## 风险评估 / 回滚
+- 可能影响：
+- 回滚方式：revert commit / 回滚 tag
+
+## 关联 Issue
+- Closes #<id>

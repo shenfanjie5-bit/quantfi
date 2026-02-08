@@ -1,0 +1,40 @@
+name: 🧱 Milestone Task
+description: 里程碑交付追踪（M0~M6）
+title: "[Milestone] Mx - "
+labels: ["milestone"]
+body:
+  - type: dropdown
+    id: milestone
+    attributes:
+      label: Milestone
+      options:
+        - M0 (skeleton + schema + empty run)
+        - M1 (tushare client + raw/ods + dedup)
+        - M2 (market ingest + adj + suspend + limit)
+        - M3 (universe snapshot + fallback)
+        - M4 (feature store + point-in-time framework)
+        - M5 (decision engine + report)
+        - M6 (backtest engine)
+    validations:
+      required: true
+
+  - type: textarea
+    id: checklist
+    attributes:
+      label: Checklist
+      value: |
+        - [ ] Code merged to main
+        - [ ] Tag created (v0.0.0-mx)
+        - [ ] CI green (ruff/black/pytest)
+        - [ ] DoD evidence attached (logs + DB query)
+        - [ ] Docs updated (README / docs)
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes / Links
+      placeholder: "PR links, decisions, caveats"
+    validations:
+      required: false
