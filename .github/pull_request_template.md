@@ -1,29 +1,38 @@
-## 4.1 目标
-
-- [ ] 本 PR 对应里程碑：`Mx`
-- [ ] 本 PR 完成的任务列表（3–10 条）：
-  1. 
-  2. 
-  3. 
-
-## 4.2 验收（DoD 勾选）
-
-- [ ] 通过 `python scripts/run_daily.py --date YYYYMMDD`
-- [ ] DB 中新增/更新了预期表（列出表名）
-- [ ] 新增/更新了 pytest（列出用例名）
-- [ ] 降级路径可触发且会写 `run_log`（说明如何触发）
-- [ ] README 更新了对应使用方法
-
-## 4.3 证据（必须贴）
-
-- [ ] 运行日志片段（含 `run_id`）
-- [ ] 关键表查询截图/SQL（例如：当天 decision 记录数）
-- [ ] 如果是回测：指标摘要（收益 / 回撤 / 换手）
+# PR 标题规范
+建议：`Mx: <short summary>` 例如 `M2: ingest daily + adj_factor`
 
 ---
 
-## 变更说明
+## 目标 / Scope
+- 里程碑（必填）：M0 / M1 / M2 / M3 / M4 / M5 / M6
+- 本 PR 完成了什么（3-10 条）：
+  1.
+  2.
+  3.
 
-## 风险与回滚
+## 变更类型
+- [ ] feat
+- [ ] fix
+- [ ] refactor
+- [ ] test
+- [ ] chore/docs
 
-## 验证步骤
+## DoD 验收清单（必须勾选）
+- [ ] `poetry run python scripts/run_daily.py --date YYYYMMDD` 可运行（或明确说明尚未要求该里程碑）
+- [ ] 关键数据写入 DB（列出表名）：
+  - [ ] run_log
+  - [ ] raw_tushare
+  - [ ] ODS: ____________________
+  - [ ] feature_daily / decision_daily / universe_snapshot（如适用）
+- [ ] 降级路径可触发且会写入 run_log（说明触发方式）：
+  - 触发方式：
+  - degrade_reasons：
+- [ ] 已新增/更新测试（列出用例）：
+  - [ ] tests/____________________
+- [ ] CI 通过：ruff / black / pytest
+- [ ] README 或 docs 已更新（如适用）
+
+## 证据（必须贴）
+### 运行日志（至少 10 行，包含 run_id）
+```text
+<贴日志>
